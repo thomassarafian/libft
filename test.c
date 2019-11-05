@@ -1,10 +1,14 @@
-#include <ctype.h>
 #include <stdio.h>
-int main()
-{
-   int c;
-   for(c = 1; c <= 127; ++c)
-   	if (isprint(c)!= 0)
-             printf("%c ", c);
-   return 0;
+#include <string.h>
+
+int main () {
+   const char str[] = "http://www.tutorialspoint.com";
+   const char ch = '/';
+   char *ret;
+
+   ret = strchr(str, ch);
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
+   
+   return(0);
 }

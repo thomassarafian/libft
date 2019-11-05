@@ -6,7 +6,7 @@
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 10:05:28 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/05 10:30:58 by tsarafia         ###   ########.fr       */
+/*   Updated: 2019/11/05 17:12:41 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,4 @@ int	ft_strlen(char *s)
 	while (s[i] != '\0')
 		i++;
 	return (i);
-}
-
-int	main(void)
-{
-	char *str;
-
-	str = "salut";
-	ft_strlen(str);
-	return (0);
 }

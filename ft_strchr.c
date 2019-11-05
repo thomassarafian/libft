@@ -6,13 +6,11 @@
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 12:30:47 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/05 16:27:00 by tsarafia         ###   ########.fr       */
+/*   Updated: 2019/11/05 17:12:23 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char *ft_strchr(char *s, int c)
+char	*ft_strchr(char *s, int c)
 {
 	int i;
 
@@ -25,12 +23,3 @@ char *ft_strchr(char *s, int c)
 	}
 	return ("(null)");
 }
-
-int main(void)
-{
-	char *s = "This is jst a String";
-	int c = 'u';
-	printf("%s", ft_strchr(s, c));
-	return 0;
-}
-
