@@ -1,14 +1,14 @@
 #include <stdio.h>
-#include <string.h>
+#include <ctype.h>
 
 int main () {
-   const char str[] = "http://www.tutorialspoint.com";
-   const char ch = ' ';
-   char *ret;
-
-   ret = strrchr(str, ch);
-
-   printf("String after |%c| is - |%s|\n", ch, ret);
+   int i = 0;
+   char str[] = "   \n 2 TUTORIALS POINT";
+	
+   while( str[i] ) {
+      putchar(tolower(str[i]));
+      i++;
+   }
    
    return(0);
 }
