@@ -3,10 +3,10 @@
 
 int main () {
    const char str[] = "http://www.tutorialspoint.com";
-   const char ch = '/';
+   const char ch = ' ';
    char *ret;
 
-   ret = strchr(str, ch);
+   ret = strrchr(str, ch);
 
    printf("String after |%c| is - |%s|\n", ch, ret);
    
