@@ -6,11 +6,11 @@
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 11:43:19 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/05 11:55:11 by tsarafia         ###   ########.fr       */
+/*   Updated: 2019/11/05 16:50:36 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	is_ascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);
