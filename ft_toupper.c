@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 10:45:31 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/05 11:56:07 by tsarafia         ###   ########.fr       */
+/*   Created: 2019/11/05 12:14:13 by tsarafia          #+#    #+#             */
+/*   Updated: 2019/11/05 12:20:13 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	isalnum(int c)
+int ft_toupper(int c)
 {
-	if ((c >= 48 && c <= 57) ||
-	(c >= 65 && c <= 90) ||
-	(c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	if (c >= 97 && c <= 122)
+	{
+		c = c - 32;
+		return (c);
+	}
+	return (c);
 }
 
 int main(void)
-{
+{	
 	int c;
 
-	c = ')';
-	printf("%d", isalnum(c));
+	c = '2';
+	printf("%c", ft_toupper(c));
 	return (0);
 }
+
+
