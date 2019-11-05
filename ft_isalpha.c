@@ -6,26 +6,15 @@
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 10:31:20 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/05 10:35:20 by tsarafia         ###   ########.fr       */
+/*   Updated: 2019/11/05 16:44:26 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-	if (c >= 101 && c <= 172)
+	if ((c >= 65 && c <= 90) ||
+			(c >= 97 && c <= 122))
 		return (1);
 	else
 		return (0);
-}
-
-
-int main(void)
-{
-	int c;
-
-	c = 2147483647;
-	printf("%d", ft_isalpha(c));
-	return (0);
 }
