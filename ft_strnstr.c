@@ -26,5 +26,5 @@ char	*ft_strnstr(char *big, char *little, int len)
 			return (&big[i]);
 		i++;
 	}
-	return ("(null)");
+	return (NULL);
 }
