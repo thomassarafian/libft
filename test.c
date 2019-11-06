@@ -1,35 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
-int main() 
-{
-	int x = 19;
-	int *ptr = &x;
+int main () {
+   char dest[] = "oldstring";
+   const char src[]  = "newstring";
 
-	printf("%d\n", *ptr);
-	printf("%d\n", ptr++);
-	printf("%d\n\n", *ptr);
+   printf("Before memmove dest = %s, src = %s\n", dest, src);
+   memmove(dest, src, 9);
+   printf("After memmove dest = %s, src = %s\n", dest, src);
 
-
-	int array [] = { 54, 85, 20, 63, 21 };
-	size_t size = sizeof( int ) * 5;
-	int length;
-
-	/* Display the initial values */
-	for( length=0; length<5; length++) {
-		printf( "%d ", array[ length ] );
-	}
-	printf( "\n" );
-
-	/* Reset the memory bloc */
-	memset( array, 0, size );
-
-	/* Display the new values */
-	for( length=0; length<5; length++) {
-		printf( "%d ", array[ length ] );
-	}
-	printf( "\n" );
-
-	return 0;
+   return(0);
 }

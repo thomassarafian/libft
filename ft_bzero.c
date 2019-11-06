@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 14:49:46 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/06 17:47:24 by tsarafia         ###   ########.fr       */
+/*   Created: 2019/11/06 14:49:24 by tsarafia          #+#    #+#             */
+/*   Updated: 2019/11/06 16:53:24 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
 
-	ptr = (unsigned char*)b;
-	while (len > 0)
+	ptr = (unsigned char*)s;
+	while (n > 0)
 	{
-		*(ptr++) = (unsigned char)c;
-		len--;
+		*(ptr++) = 0;
+		n--;
 	}
-	return (b);
 }
