@@ -6,15 +6,15 @@
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:29:27 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/06 18:27:50 by tsarafia         ###   ########.fr       */
+/*   Updated: 2019/11/07 16:53:19 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t			i;
+	size_t				i;
 	unsigned char 		*ptr_dst;
 	const unsigned char	*ptr_src;
 

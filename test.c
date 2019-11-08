@@ -2,12 +2,13 @@
 #include <string.h>
 
 int main () {
-   char dest[] = "oldstring";
-   const char src[]  = "newstring";
+   const char str[] = "http://wwwtutorial\0spointcom";
+   const char ch = '\0';
+   char *ret;
 
-   printf("Before memmove dest = %s, src = %s\n", dest, src);
-   memmove(dest, src, 9);
-   printf("After memmove dest = %s, src = %s\n", dest, src);
+   ret = strchr(str, ch);
 
+   printf("String after |%c| is - |%s|\n", ch, ret);
+   
    return(0);
-}
+} 

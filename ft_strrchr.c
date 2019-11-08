@@ -6,9 +6,11 @@
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 15:17:45 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/05 17:36:24 by tsarafia         ###   ########.fr       */
+/*   Updated: 2019/11/07 16:54:32 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(char *s, int c)
 {

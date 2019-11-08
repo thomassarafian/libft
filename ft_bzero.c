@@ -6,9 +6,11 @@
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 14:49:24 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/06 16:53:24 by tsarafia         ###   ########.fr       */
+/*   Updated: 2019/11/07 16:51:03 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
