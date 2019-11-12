@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 10:31:20 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/08 18:33:51 by tsarafia         ###   ########.fr       */
+/*   Created: 2019/11/11 16:53:50 by tsarafia          #+#    #+#             */
+/*   Updated: 2019/11/12 11:20:25 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if ((c >= 65 && c <= 90) ||
-			(c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
+	char	*str1;
+	char	*str2;
+	char	*dest;
+	int		i;
+	int		j;
+
+	if (!s1 || !s2)
+		return (NULL);
+	str1 = (char*)s1;
+	str2 = (char*)s2;
+	i = -1;
+	j = -1;
+	if (!(dest = malloc(sizeof(char*) * (ft_strlen(str1) + ft_strlen(str2)))))
+		return (NULL);
+	while (str1[++i])
+		dest[i] = str1[i];
+	while (str2[++j])
+		dest[i + j] = str2[j];
+	dest[i + j] = '\0';
+	return (dest);
 }
