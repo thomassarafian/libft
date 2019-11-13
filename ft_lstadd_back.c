@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/12 17:53:26 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/13 11:01:14 by tsarafia         ###   ########.fr       */
+/*   Created: 2019/11/13 11:33:52 by tsarafia          #+#    #+#             */
+/*   Updated: 2019/11/13 11:41:06 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
-{	
+void	ft_lstadd_back(t_list **alst, t_list *new)
+{
 	if (alst && new)
 	{
-		new->next = *alst;
+		new->next = alst;
 		*alst = new;
 	}
 }
