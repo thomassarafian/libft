@@ -6,7 +6,7 @@
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 16:34:12 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/13 17:10:03 by tsarafia         ###   ########.fr       */
+/*   Updated: 2019/11/13 19:06:55 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,5 @@ void 					ft_lstclear(t_list **lst, void (*del)(void*));
 void					ft_lstiter(t_list *lst, void (*f)(void *));
 t_list 					*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+
 #endif
