@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/13 11:33:52 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/13 17:05:00 by tsarafia         ###   ########.fr       */
+/*   Created: 2019/11/13 19:35:48 by tsarafia          #+#    #+#             */
+/*   Updated: 2019/11/13 19:36:39 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list *tmp;
-	
+
 	tmp = *alst;
-	new->next = NULL; 
+	new->next = NULL;
 	if (*alst == NULL)
 	{
 		*alst = new;
-		return;
+		return ;
 	}
 	while (tmp->next != NULL)
 		tmp = tmp->next;

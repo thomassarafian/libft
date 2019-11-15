@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 19:06:07 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/12 10:59:52 by tsarafia         ###   ########.fr       */
+/*   Created: 2019/11/15 15:17:16 by tsarafia          #+#    #+#             */
+/*   Updated: 2019/11/15 15:17:36 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,26 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	i;
-	size_t	j;
-	char	*hay;
-	char	*need;
+	unsigned int	counter1;
+	unsigned int	counter2;
+	char			*haystackcop;
 
-	hay = (char*)haystack;
-	need = (char*)needle;
-	i = 0;
-	j = 0;
-	if (*needle == '\0')
-		return ((char *)haystack);
-	while (hay[i] && i < len)
+	haystackcop = (char *)haystack;
+	if (needle[0] == '\0')
+		return (haystackcop);
+	counter1 = 0;
+	counter2 = 0;
+	while (haystack[counter1] != '\0' && counter1 < len)
 	{
-		j = 0;
-		while (hay[i + j] == need[j] && (i + j) < len)
-			j++;
-		if (need[j] == '\0')
-			return (&hay[i]);
-		i++;
+		counter2 = 0;
+		while (haystack[counter1 + counter2] ==
+				needle[counter2] && counter1 + counter2 < len)
+		{
+			counter2++;
+			if (needle[counter2] == '\0')
+				return (&haystackcop[counter1]);
+		}
+		counter1++;
 	}
-	return (NULL);
+	return (0);
 }

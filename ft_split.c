@@ -6,7 +6,7 @@
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 10:45:50 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/12 12:46:35 by tsarafia         ###   ########.fr       */
+/*   Updated: 2019/11/15 14:39:35 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int		count_word(char *str, char charset)
 	return (count);
 }
 
-char	*ft_strcpy(char *str, char charset)
+char	*ft_strcpyl(char *str, char charset)
 {
 	char	*tab;
 	int		i;
@@ -83,7 +83,7 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s && !is_charset(*s, c))
 		{
-			tab[i] = ft_strcpy((char*)s, c);
+			tab[i] = ft_strcpyl((char*)s, c);
 			i++;
 			while (*s && !is_charset(*s, c))
 				s++;

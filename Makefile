@@ -6,7 +6,7 @@
 #    By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/07 15:21:25 by tsarafia          #+#    #+#              #
-#    Updated: 2019/11/13 19:06:34 by tsarafia         ###   ########.fr        #
+#    Updated: 2019/11/15 15:32:26 by tsarafia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,16 +44,19 @@ SRCS	=	ft_atoi.c			\
 			ft_toupper.c		\
 			ft_tolower.c		\
 			ft_isprint.c		\
-			ft_strlen.c			\
-			ft_lstnew_bonus.c			\
-			ft_lstadd_front_bonus.c	\
-			ft_lstsize_bonus.c		\
-			ft_lstlast_bonus.c		\
-			ft_lstadd_back_bonus.c	\
+			ft_strlen.c
+
+BSRCS	=	ft_lstnew_bonus.c			\
+			ft_lstadd_front_bonus.c		\
+			ft_lstsize_bonus.c			\
+			ft_lstlast_bonus.c			\
+			ft_lstadd_back_bonus.c		\
 			ft_lstdelone_bonus.c		\
-			ft_lstclear_bonus.c		\
-			ft_lstiter_bonus.c		\
+			ft_lstclear_bonus.c			\
+			ft_lstiter_bonus.c			\
 			ft_lstmap_bonus.c
+
+BOBJS	=	$(BSRCS:.c=.o)
 
 OBJS	=	$(SRCS:.c=.o)
 
@@ -74,8 +77,13 @@ $(NAME):
 	$(AR) $(NAME) $(OBJS)
 	$(LIB) $(NAME)
 
+bonus	:
+	$(GCC) $(CFLAGS) -c ./$(BSRCS) -I $(HEAD)
+	$(AR) $(NAME) $(BOBJS)
+	$(LIB) $(NAME)
+
 clean	:
-	rm -f $(OBJS)
+	rm -rf $(OBJS) $(BOBJS)
 
 fclean	: clean 
 	rm -rf  $(NAME)

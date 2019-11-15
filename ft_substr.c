@@ -6,7 +6,7 @@
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 17:20:07 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/13 14:08:58 by tsarafia         ###   ########.fr       */
+/*   Updated: 2019/11/15 14:33:00 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		i;
 	char	*verif;
 
-	verif = "";
+	if (!s)
+		return (NULL);
+	if (!(verif = (char *)malloc(sizeof(char))))
+		return (NULL);
+	*verif = '\0';
 	i = 0;
 	str = (char*)s;
 	if (!(dest = (char*)malloc(sizeof(char) * (len + 1))))

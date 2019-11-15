@@ -6,7 +6,7 @@
 /*   By: tsarafia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 18:18:30 by tsarafia          #+#    #+#             */
-/*   Updated: 2019/11/12 15:46:15 by tsarafia         ###   ########.fr       */
+/*   Updated: 2019/11/15 14:22:26 by tsarafia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*dest;
+	void	*dest;
 
-	dest = (char *)malloc(sizeof(char) * (count * size));
+	dest = (void *)malloc(count * size);
 	if (!dest)
 		return (NULL);
-	ft_bzero(dest, count);
+	ft_bzero(dest, count * size);
 	return (dest);
 }
